@@ -7,7 +7,7 @@ use Illuminate\Http\RedirectResponse;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 
-class Controller extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -43,7 +43,7 @@ class Controller extends Controller
     public function show(Product $product) : View
     {
         return view('products.show', [
-            'product' => $products
+            'product' => $product
         ]);
     }
 
@@ -53,7 +53,7 @@ class Controller extends Controller
     public function edit(Product $product) : View
     {
         return view('products.edit', [
-            'products' => $product
+            'product' => $product
         ]);
     }
 

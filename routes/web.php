@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('products', function () {
     return view('welcome');
 });
-Route::resource('products', Controller::class);
+Route::resource('products', ProductController::class);
